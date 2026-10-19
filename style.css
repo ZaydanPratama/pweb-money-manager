@@ -14,7 +14,7 @@ header {
     background-color: #183c30;
     color: white;
     padding: 24px;
-    text-align: center;
+    text-align: left;
 }
 
 main {
@@ -27,7 +27,8 @@ section {
     margin-bottom: 24px;
 }
 
-.transaction-form {
+.transaction-form,
+.transaction-history {
     background-color: white;
     padding: 20px;
     border-radius: 12px;
@@ -57,4 +58,12 @@ button {
 
 button:hover {
     background-color: #194f37;
+}
+
+#transaction-list {
+    padding-left: 20px;
+}
+
+#transaction-list li {
+    margin-bottom: 10px;
 }
