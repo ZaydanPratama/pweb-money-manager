@@ -14,19 +14,64 @@
     </header>
 
     <main>
+        <section class="summary">
+            <article>
+                <h3>Pemasukan</h3>
+                <p id="income">Rp0</p>
+            </article>
+
+            <article>
+                <h3>Pengeluaran</h3>
+                <p id="expense">Rp0</p>
+            </article>
+
+            <article>
+                <h3>Saldo</h3>
+                <p id="balance">Rp0</p>
+            </article>
+        </section>
+
         <section class="transaction-form">
             <h2>Tambah Transaksi</h2>
 
             <form id="transaction-form">
+                <label for="date">Tanggal</label>
+                <input type="date" id="date" required>
+
                 <label for="type">Jenis Transaksi</label>
-                <select id="type">
+                <select id="type" required>
                     <option value="income">Pemasukan</option>
                     <option value="expense">Pengeluaran</option>
                 </select>
 
+                <label for="category">Kategori</label>
+                <select id="category" required>
+                    <option value="Gaji">Gaji</option>
+                    <option value="Makanan">Makanan</option>
+                    <option value="Transportasi">Transportasi</option>
+                    <option value="Pendidikan">Pendidikan</option>
+                    <option value="Hiburan">Hiburan</option>
+                    <option value="Lainnya">Lainnya</option>
+                </select>
+
                 <label for="amount">Nominal</label>
-                <input type="number" id="amount"
-                    min="1" placeholder="Masukkan nominal" required>
+                <input
+                    type="number"
+                    id="amount"
+                    min="1"
+                    step="1"
+                    placeholder="Masukkan nominal"
+                    required
+                >
+
+                <label for="note">Catatan (opsional)</label>
+                <textarea
+                    id="note"
+                    rows="3"
+                    placeholder="Tambahkan catatan"
+                ></textarea>
+
+                <p id="error-message" role="alert" hidden></p>
 
                 <button type="submit">Simpan Transaksi</button>
             </form>
