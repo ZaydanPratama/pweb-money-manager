@@ -1,0 +1,60 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f5;
+    color: #1f2937;
+}
+
+header {
+    background-color: #183c30;
+    color: white;
+    padding: 24px;
+    text-align: center;
+}
+
+main {
+    max-width: 1000px;
+    margin: 24px auto;
+    padding: 0 20px;
+}
+
+section {
+    margin-bottom: 24px;
+}
+
+.transaction-form {
+    background-color: white;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input,
+select,
+button {
+    padding: 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+button {
+    background-color: #236b4b;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #194f37;
+}
