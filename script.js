@@ -15,8 +15,10 @@ function formatRupiah(amount) {
 function renderTransactions() {
     transactionList.innerHTML = "";
 
-    for (const transaction of transactions) {
+    for (let i = transactions.length - 1; i >= 0; i--) {
+        const transaction = transactions[i];
         const item = document.createElement("li");
+        const deleteButton = document.createElement("button");
 
         if (transaction.type === "income") {
             item.textContent =
@@ -26,7 +28,22 @@ function renderTransactions() {
                 "Pengeluaran: " + formatRupiah(transaction.amount);
         }
 
-        transactionList.prepend(item);
+        deleteButton.textContent = "Hapus";
+        deleteButton.classList.add("delete-button");
+
+        deleteButton.addEventListener("click", function() {
+            const confirmation = confirm(
+                "Apakah kamu yakin ingin menghapus transaksi ini?"
+            );
+
+            if (confirmation) {
+                transactions.splice(i, 0);
+                renderTransactions();
+            }
+        });
+
+        item.appendChild(deleteButton);
+        transactionList.appendChild(item);
     }
 
     emptyMessage.hidden = transactions.length > 0;

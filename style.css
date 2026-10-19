@@ -14,7 +14,7 @@ header {
     background-color: #183c30;
     color: white;
     padding: 24px;
-    text-align: left;
+    text-align: center;
 }
 
 main {
@@ -66,4 +66,13 @@ button:hover {
 
 #transaction-list li {
     margin-bottom: 10px;
+}
+
+.delete-button {
+    margin-left: 10px;
+    background-color: #dc2626;
+}
+
+.delete-button:hover {
+    background-color: #991b1b;
 }
